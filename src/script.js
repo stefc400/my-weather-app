@@ -3,14 +3,19 @@ function updateHeading(response) {
   let cityName = document.querySelector("#current-city");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let weatherDescription = document.querySelector(
+    "#current-weather-description"
+  );
   let humidity = Math.round(response.data.main.humidity);
   let wind = Math.round(3.6 * response.data.wind.speed);
   let temp = Math.round(response.data.main.temp);
   let name = response.data.name;
+  let description = response.data.weather[0].main;
   heading.innerHTML = temp;
   cityName.innerHTML = name;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
   windElement.innerHTML = `Wind: ${wind}km/h`;
+  weatherDescription.innerHTML = description;
 }
 
 function getLocationTemp(position) {
