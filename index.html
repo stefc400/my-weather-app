@@ -24,7 +24,32 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="row search-bar">
+        <form class="col-8 search-form" id="search-form">
+          <input
+            type="text"
+            autocomplete="off"
+            placeholder="Enter a city"
+            class="search-input"
+            id="search-input"
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
+        </form>
+
+        <button
+          class="col-4 current-location-button"
+          id="current-location-button"
+        >
+          Current Location
+        </button>
+      </div>
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
