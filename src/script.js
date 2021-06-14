@@ -6,16 +6,29 @@ function updateHeading(response) {
   let weatherDescription = document.querySelector(
     "#current-weather-description"
   );
+  let weatherIcon = document.querySelector("#weather-icon");
   let humidity = Math.round(response.data.main.humidity);
   let wind = Math.round(3.6 * response.data.wind.speed);
   let temp = Math.round(response.data.main.temp);
   let name = response.data.name;
   let description = response.data.weather[0].main;
+  if (description === "Clear") {
+    description = "Sunny";
+  }
+  if (description === "Clouds") {
+    description = "Cloudy";
+  }
   heading.innerHTML = temp;
   cityName.innerHTML = name;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
   windElement.innerHTML = `Wind: ${wind}km/h`;
   weatherDescription.innerHTML = description;
+
+  if (description === "Sunny") {
+    weatherIcon.innerHTML = `<i class="fas fa-sun"></i>`;
+  } else {
+    weatherIcon.innerHTML = `<i class="fas fa-cloud cloudy"></i>`;
+  }
 }
 
 function getLocationTemp(position) {

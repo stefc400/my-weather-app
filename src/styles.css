@@ -95,7 +95,8 @@ p {
 }
 
 .wednesday-icon,
-.saturday-icon {
+.saturday-icon,
+.cloudy {
   color: rgba(66, 165, 245, 50%);
 }
 
