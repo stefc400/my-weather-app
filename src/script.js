@@ -69,3 +69,38 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", updateLocation);
 
 search("New york");
+
+function formatDate(today) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[today.getDay()];
+  let months = [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[today.getMonth()];
+  let date = today.getDate();
+
+  let fullDate = `${day}, ${month} ${date}`;
+  return fullDate;
+}
+
+let currentDate = document.querySelector("#current-date");
+currentDate.innerHTML = formatDate(new Date());
