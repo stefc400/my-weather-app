@@ -62,40 +62,7 @@ p {
 .weather-info {
   font-size: 20px;
 }
-.seven-day-forecast {
-  padding: 40px 20px;
-}
-.sunday-icon,
-.monday-icon,
-.tuesday-icon,
-.wednesday-icon,
-.thursday-icon,
-.friday-icon,
-.saturday-icon {
-  font-size: 50px;
-}
 
-.sunday-icon,
-.monday-icon,
-.tuesday-icon,
-.thursday-icon,
-.friday-icon {
-  color: #ffa726;
-}
-
-.sunday-box,
-.monday-box,
-.tuesday-box,
-.wednesday-box,
-.thursday-box,
-.friday-box,
-.saturday-box {
-  border: 1px solid gray;
-  margin: 2px;
-}
-
-.wednesday-icon,
-.saturday-icon,
 .cloudy {
   color: rgba(66, 165, 245, 50%);
 }
