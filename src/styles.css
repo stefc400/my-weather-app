@@ -25,6 +25,13 @@ ul {
 p {
   font-family: "Poppins", sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 .weather-app {
   text-align: center;
   max-width: 70%;
@@ -77,4 +84,14 @@ p {
 }
 .github-link {
   margin-top: 25px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
 }

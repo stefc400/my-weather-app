@@ -32,7 +32,7 @@ function updateHeading(response) {
   let weatherIcon = document.querySelector("#weather-icon");
   let humidity = Math.round(response.data.main.humidity);
   let wind = Math.round(3.6 * response.data.wind.speed);
-  let temp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
   let name = response.data.name;
   let description = response.data.weather[0].main;
   let currentDate = document.querySelector("#current-date");
@@ -44,7 +44,7 @@ function updateHeading(response) {
   if (description === "Clouds") {
     description = "Cloudy";
   }
-  heading.innerHTML = temp;
+  heading.innerHTML = Math.round(celsiusTemperature);
   cityName.innerHTML = name;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
   windElement.innerHTML = `Wind: ${wind}km/h`;
@@ -86,6 +86,30 @@ function updateLocation(event) {
   cityName = cityName.trim();
   search(cityName);
 }
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 
 let locationButton = document.querySelector("#current-location-button");
 locationButton.addEventListener("click", getLocation);
