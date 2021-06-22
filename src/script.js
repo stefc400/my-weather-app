@@ -36,6 +36,7 @@ function updateHeading(response) {
   let name = response.data.name;
   let description = response.data.weather[0].main;
   let currentDate = document.querySelector("#current-date");
+  let icondID = response.data.weather[0].icon;
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
   if (description === "Clear") {
     description = "Sunny";
@@ -49,11 +50,10 @@ function updateHeading(response) {
   windElement.innerHTML = `Wind: ${wind}km/h`;
   weatherDescription.innerHTML = description;
 
-  if (description === "Sunny") {
-    weatherIcon.innerHTML = `<i class="fas fa-sun"></i>`;
-  } else {
-    weatherIcon.innerHTML = `<i class="fas fa-cloud cloudy"></i>`;
-  }
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icondID}@2x.png`
+  );
 }
 
 function getLocationTemp(position) {
