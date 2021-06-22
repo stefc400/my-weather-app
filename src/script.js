@@ -1,3 +1,26 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `Last updated ${day} ${hours}:${minutes}`;
+}
+
 function updateHeading(response) {
   let heading = document.querySelector("#current-temperature");
   let cityName = document.querySelector("#current-city");
@@ -12,6 +35,8 @@ function updateHeading(response) {
   let temp = Math.round(response.data.main.temp);
   let name = response.data.name;
   let description = response.data.weather[0].main;
+  let currentDate = document.querySelector("#current-date");
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
   if (description === "Clear") {
     description = "Sunny";
   }
@@ -69,38 +94,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", updateLocation);
 
 search("New york");
-
-function formatDate(today) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[today.getDay()];
-  let months = [
-    "January",
-    "Febuary",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  let month = months[today.getMonth()];
-  let date = today.getDate();
-
-  let fullDate = `${day}, ${month} ${date}`;
-  return fullDate;
-}
-
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = formatDate(new Date());
