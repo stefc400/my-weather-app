@@ -74,11 +74,6 @@ a:hover {
   color: rgba(66, 165, 245, 50%);
 }
 
-.celsius-to-fahrenheit {
-  font-size: 22px;
-  padding: 0px;
-}
-
 .current-date {
   font-size: 12px;
   margin: 0 auto;
@@ -86,16 +81,6 @@ a:hover {
 .github-link {
   font-size: 12px;
   margin-top: 20px;
-}
-
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: black;
 }
 
 .weather-forecast {
@@ -114,4 +99,10 @@ a:hover {
 }
 .forecast-temperatures-min {
   opacity: 0.5;
+}
+
+.celsius {
+  font-size: 20px;
+  position: relative;
+  bottom: 40px;
 }
