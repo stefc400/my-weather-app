@@ -111,11 +111,6 @@ function getLocationTemp(position) {
   axios.get(apiUrl).then(updateHeading);
 }
 
-function getLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getLocationTemp);
-}
-
 function search(city) {
   let apiKey = "4cee29ecbdcb246efdb3579f6d95b7f0";
   let unit = "metric";
@@ -123,6 +118,12 @@ function search(city) {
   let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(updateHeading);
 }
+
+function getLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getLocationTemp);
+}
+
 function updateLocation(event) {
   event.preventDefault();
   let cityName = document.querySelector("#search-input").value;
@@ -131,10 +132,10 @@ function updateLocation(event) {
   search(cityName);
 }
 
-let locationButton = document.querySelector("#current-location-button");
-locationButton.addEventListener("click", getLocation);
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", updateLocation);
+
+let locationButton = document.querySelector("#current-location-button");
+locationButton.addEventListener("click", getLocation);
 
 search("New york");
