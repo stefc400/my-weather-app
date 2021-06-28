@@ -25,34 +25,40 @@
   </head>
   <body>
     <div class="weather-app">
-      <div class="container">
-        <div class="row search-bar">
-          <form class="col-8 search-form" id="search-form">
-            <input
-              type="text"
-              autocomplete="off"
-              autofocus="on"
-              placeholder="Enter a city"
-              class="search-input"
-              id="search-input"
-            />
-            <input
-              type="submit"
-              value="Search"
-              class="search-button"
-              id="search-button"
-            />
-          </form>
+      <div class="container weather-box">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="text"
+                autocomplete="off"
+                autofocus="on"
+                placeholder="Enter a city"
+                class="search-input form-control"
+                id="search-input"
+              />
+            </div>
+            <div class="col-1">
+              <input
+                type="submit"
+                value="Search"
+                class="search-button btn btn-primary"
+                id="search-button"
+              />
+            </div>
+            <div class="col-4">
+              <button
+                class="current-location-button btn"
+                id="current-location-button"
+              >
+                📍 Current Location
+              </button>
+            </div>
+          </div>
+        </form>
 
-          <button
-            class="col-4 current-location-button"
-            id="current-location-button"
-          >
-            📍 Current Location
-          </button>
-        </div>
         <div class="row align-items-center current-weather">
-          <div class="col-3 current-city-temperature">
+          <div class="col-3">
             <h1>
               <span class="current-temperature" id="current-temperature"></span>
               <span class="celsius">°C</span>
@@ -77,11 +83,11 @@
               <br />
               <span id="wind"></span>
             </p>
-            <p class="current-date" id="current-date"></p>
           </div>
         </div>
         <div class="weather-forecast" id="forecast"></div>
       </div>
+      <p class="current-date" id="current-date"></p>
       <p class="github-link">
         <a href="https://github.com/stefc400/my-weather-app" target="_blank"
           >Open-sourced on Github</a

@@ -1,26 +1,20 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 h1 {
-  margin-left: 15px;
-  padding: 0;
   font-size: 70px;
-}
-
-h2 {
-  font-size: 40px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
   font-size: 20px;
-  margin-top: 45px;
+  list-style: none;
+  margin: 0;
   margin-bottom: 15px;
+  margin-top: 45px;
+  padding: 0;
+  text-align: center;
 }
 
 p {
@@ -33,60 +27,38 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.weather-app {
-  text-align: center;
-  max-width: 70%;
-  margin: 110px auto;
-}
 
-.container {
-  border: 2px solid rgba(66, 165, 245, 90%);
-}
-.search-bar {
-  padding: 20px;
-  text-align: left;
-}
-.current-weather {
-  margin: 50px;
-}
-.current-city-weather {
-  border: 2px solid black;
-  background: rgba(133, 187, 229, 20%);
-}
-.search-input {
-  width: 400px;
-  height: 40px;
-}
-.search-button {
-  border: 2px solid black;
-  padding: 6px;
-}
-
-.weather-icon {
-  display: inline;
-}
-.weather-info {
+.celsius {
+  bottom: 40px;
   font-size: 20px;
+  position: relative;
+  right: 20px;
+}
+
+.current-city {
+  font-size: 40px;
   margin: 0 auto;
 }
 
-.cloudy {
-  color: rgba(66, 165, 245, 50%);
+.current-city-weather {
+  background: rgba(133, 187, 229, 20%);
+  border: 2px solid black;
 }
 
 .current-date {
   font-size: 12px;
-  margin: 0 auto;
-}
-.github-link {
-  font-size: 12px;
-  margin-top: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 
-.weather-forecast {
-  text-align: center;
-  margin-top: 70px;
-  margin-bottom: 30px;
+.current-location-button {
+  margin: 0 auto;
+  padding: 7px 25px;
+  border: 2px solid #c9d7eb;
+}
+
+.current-weather {
+  margin: 70px;
 }
 
 .forecast-date {
@@ -101,8 +73,39 @@ a:hover {
   opacity: 0.5;
 }
 
-.celsius {
+.github-link {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.search-input {
+  padding: 7px;
+}
+.search-button {
+  border: 2px solid black;
+  padding: 7px 15px;
+}
+
+.weather-app {
+  margin: 30px auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.weather-box {
+  border: 2px solid rgba(66, 165, 245, 90%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.weather-forecast {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.weather-icon {
+  display: inline;
+}
+.weather-info {
   font-size: 20px;
-  position: relative;
-  bottom: 40px;
+  margin: 0 auto;
 }
