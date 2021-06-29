@@ -3,24 +3,29 @@ a {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: #ececec;
 }
 h1 {
   font-size: 70px;
   margin: 0;
+  color: #142d4c;
 }
 p {
   font-family: "Poppins", sans-serif;
+  color: #142d4c;
 }
 a:hover {
   text-decoration: underline;
 }
 .celsius {
+  color: #142d4c;
   bottom: 40px;
   font-size: 20px;
   position: relative;
   right: 20px;
 }
 .current-city {
+  color: #142d4c;
   font-size: 40px;
   margin-bottom: 5px;
 }
@@ -35,7 +40,13 @@ a:hover {
 }
 .current-weather {
   margin: 70px 0;
+  color: #142d4c;
 }
+
+.current-weather-description {
+  color: #142d4c;
+}
+
 .current-weather-description:first-letter {
   text-transform: capitalize;
 }
@@ -44,6 +55,7 @@ a:hover {
   opacity: 0.7;
 }
 .forecast-temperatures {
+  color: #142d4c;
   font-size: 13px;
 }
 .forecast-temperatures-min {
@@ -66,14 +78,17 @@ a:hover {
   text-align: center;
 }
 .weather-box {
-  border: 2px solid rgba(66, 165, 245, 90%);
+  border: 2px solid rgb(56, 81, 112);
   border-radius: 10px;
   padding: 20px;
+  background: #9fd3c7;
 }
 .weather-forecast {
+  color: #142d4c;
   margin-bottom: 20px;
 }
 .weather-information {
+  color: #142d4c;
   font-size: 18px;
   margin: 0 auto;
 }
