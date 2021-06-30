@@ -23,12 +23,12 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
-  <body>
+  <body id="body" class="body">
     <div class="weather-app">
-      <div class="container weather-box">
+      <div class="weather-box container">
         <form id="search-form">
           <div class="row">
-            <div class="col-7">
+            <div class="col-7 search-bar">
               <input
                 type="text"
                 autocomplete="off"
@@ -38,7 +38,7 @@
                 id="search-input"
               />
             </div>
-            <div class="col-1">
+            <div class="col-1 search-btn">
               <input
                 type="submit"
                 value="Search"
@@ -57,14 +57,14 @@
           </div>
         </form>
 
-        <div class="row align-items-center current-weather">
-          <div class="col-3">
+        <div class="current-weather row align-items-center">
+          <div class="col-3 temperature-heading">
             <h1>
               <span id="current-temperature"></span>
               <span class="celsius">°C</span>
             </h1>
           </div>
-          <div class="col-2">
+          <div class="col-2 current-icon">
             <img src="" alt="weather-icon" id="weather-icon" />
             <p
               class="current-weather-description"
@@ -82,12 +82,20 @@
         </div>
         <div class="weather-forecast" id="forecast"></div>
       </div>
-      <p class="current-date" id="current-date"></p>
-      <p class="github-link">
-        <a href="https://github.com/stefc400/my-weather-app" target="_blank"
-          >Open-sourced on Github</a
-        >
-      </p>
+      <div class="footer row align-items-center">
+        <div class="col-4"></div>
+        <div class="github-link col-3">
+          <p>
+            <a href="https://github.com/stefc400/my-weather-app" target="_blank"
+              >Open-sourced on Github</a
+            >
+          </p>
+        </div>
+
+        <div class="col-3">
+          <p class="current-date" id="current-date"></p>
+        </div>
+      </div>
     </div>
     <script src="src/script.js"></script>
   </body>

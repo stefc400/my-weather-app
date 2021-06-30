@@ -87,6 +87,15 @@ function updateHeading(response) {
   if (description === "Clouds") {
     description = "Cloudy";
   }
+  if (description === "Sunny") {
+    let body = document.querySelector("#body");
+    body.classList.add("sunny");
+  } else {
+    let body = document.querySelector("#body");
+    body.classList.add("rainy");
+    body.classList.remove("sunny");
+  }
+
   heading.innerHTML = Math.round(celsiusTemperature);
   cityName.innerHTML = name;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
