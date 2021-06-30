@@ -1,6 +1,5 @@
 a {
   color: rgba(236, 236, 236, 0.8);
-  transition: 200ms all ease-in-out;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +18,6 @@ p {
 a:hover {
   color: rgba(236, 236, 236, 0.8);
   text-decoration: none;
-  font-size: 14px;
 }
 .celsius {
   color: #142d4c;
@@ -27,6 +25,10 @@ a:hover {
   font-size: 20px;
   position: relative;
   right: 20px;
+}
+.coded-by {
+  font-size: 12px;
+  color: rgba(236, 236, 236, 0.8);
 }
 .container {
   margin: 0;
@@ -85,6 +87,9 @@ a:hover {
   font-size: 12px;
   border-right: 2px solid #ececec;
   border-left: 2px solid #ececec;
+}
+.linked-link {
+  font-size: 12px;
 }
 .search-bar {
   padding-right: 12px;

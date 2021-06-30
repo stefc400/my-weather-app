@@ -90,6 +90,8 @@ function updateHeading(response) {
   if (description === "Sunny") {
     let body = document.querySelector("#body");
     body.classList.add("sunny");
+    body.classList.remove("rainy");
+    body.classList.remove("cloudy");
   } else {
     let body = document.querySelector("#body");
     body.classList.add("rainy");
@@ -100,6 +102,8 @@ function updateHeading(response) {
   if (description === "Cloudy") {
     let body = document.querySelector("#body");
     body.classList.add("cloudy");
+    body.classList.remove("sunny");
+    body.classList.remove("rainy");
   }
 
   heading.innerHTML = Math.round(celsiusTemperature);
