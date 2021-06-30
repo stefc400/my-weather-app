@@ -94,6 +94,12 @@ function updateHeading(response) {
     let body = document.querySelector("#body");
     body.classList.add("rainy");
     body.classList.remove("sunny");
+    body.classList.remove("cloudy");
+  }
+
+  if (description === "Cloudy") {
+    let body = document.querySelector("#body");
+    body.classList.add("cloudy");
   }
 
   heading.innerHTML = Math.round(celsiusTemperature);
